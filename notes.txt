@@ -1,0 +1,788 @@
+objects in python
+---------------
+
+number
+-------
+number can be integer or decimal or octal or hexadecimal.
+
+val = 10
+aval = 45.4343
+
+
+string
+------
+string is sequence of characters
+string is defined in single quotes or double quotes or triple quotes
+
+name = "unix"
+aname = "unix shell scripting"
+bname = 'python programming'
+cname = """java programming"""
+dname = """
+I 
+love
+python
+programming
+"""
+
+list ( array in C )
+-----
+list contains set of numbers or set of strings or any combination
+list elements are defined in []
+
+
+alist = [10,20,30]
+print(alist)
+print(alist[1])
+print(alist[2])
+print("Elements are :", alist)
+blist = ["unix","shell",30,45.434]
+clist = ["unix","c","java"]
+
+tuple ( read only )
+-----
+tuple contains set of numbers or set of strings or any combination
+tuple elements are defined in () .
+elements inside the tuple cannot be modified.
+
+atup = (10,20,30)
+print(atup)
+btup = ("unix","java","oracle")
+ctup = (10,20,30,"unix")
+
+
+dictionary
+-----------
+dictionary contains elements in the form of keys
+In dictionary , the keys are always unique.
+dictionary elements are defined in {}
+
+syntax:
+dictn = { key : value , key:value , key :value}
+
+example:
+adict = {"chap1":10 ,"chap2":20,"chap3":30}
+print(adict["chap1"])     # 10
+print(adict["chap2"])     # 20
+
+
+set
+
+
+
+
+comments in python
+----------------------
+
+1. single line comment ( # )
+
+
+2. multiline comment
+any line starting and ending with '''  are considered as multiline comment.
+
+'''
+these
+lines
+are
+commented
+'''
+
+"""
+even
+these
+lines 
+are commented
+"""
+
+
+
+
+
+
+
+
+
+
+classification of objects
+-------------------------
+
+
+
+mutable objects
+----------------
+list
+dictionary
+
+
+immutable objects
+------------------
+number
+string
+tuple
+
+functions
+----------
+function is simply reusable code that is already defined.
+
+There are 2 types of functions.
+
+1. builtin functions
+
+2. user defined functions
+
+builtin functions
+-----------------
+print()
+len()    : dispay total. no. of elements
+id()     : identity of object .. unique number for each object
+type()   : type of object
+range()  :
+range(start,stop,step)
+input()  : capture input from keyboard
+max()
+min()
+sum()
+
+converstion functions
+----------------------
+str()
+int()
+float()
+oct()
+hex()
+list()
+tuple()
+dict()
+set()
+
+How to display all the builtin functions and builtin exceptions ?
+------------------------------------------------------------------
+
+dir(__builtins__)  in the interactive prompt
+
+
+
+statements in python
+-------------------
+
+
+conditional statements
+---------------------
+simple if statement
+if-else statement
+if-elif-elif-else statement
+
+
+control statements
+--------------------
+for
+while
+
+jump statements
+----------------
+break
+continue
+
+
+
+
+
+
+
+level1
+level1
+level1
+if cond:
+    level2
+    level2
+    level2
+    level2
+    if condition:
+	level3
+	level3
+    else:
+	level3
+  	level3
+    level2
+    level2
+level1
+level1
+
+
+
+
+
+Python operators
+-----------------
+
+arithmetic operators
+
+logical operators
+------------------
+and
+or
+not
+
+relational operator
+-------------------
+<
+>
+<=
+>=
+==
+!=
+
+special operators
+------------------
+in
+
+assignment operators
+------------------------
++=
+-=
+*=
+/=
+
+
+
+arguments passing
+--------------------
+
+
+fixed arguments
+
+default arguments
+
+keyword arguments
+
+variable length arguments
+
+
+working with files
+----------------------
+
+1. working with flat files
+--------------------------
+txt
+conf
+csv
+
+How to open the file
+---------------------
+
+syntax:
+fileobject = open(filename, mode)
+
+example :
+fread = open("abc.txt","r")# read mode
+
+fwrite = open("hello.txt","w")		# write mode
+case1: If the file is already existing , it overwrite the file
+case2: If the file is not existing , it creates a new file and writes 
+
+
+fapp = open("demo.txt","a")		# append mode
+case1: If the file is already existing , it appends the data to the file
+case2: If the file is not existing , it creates a new file and writes 
+
+
+How to close the file ?
+------------------------
+fileobject.close()
+
+
+
+2. working with third party files
+-----------------------------------
+doc/docx
+xls/xlsx
+pdf
+rar
+zip
+
+
+module (or) library (or) package
+--------------------------------------
+
+Every module or library contains set of methods.
+Every library contains reusable code that is defined by someone else.
+
+
+There are two types of libraries
+
+
+1. builtin libraries
+----------------------
+Built-in libraries are installed with the python itself.
+
+Path : C:\Python35\Lib
+
+sys           : system config information
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml        
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+third party libraries
+---------------------
+
+networking
+----------
+requests : performing http requests using rest calls
+paramiko : interacting with linux servers thru ssh
+netmiko  : interacting with routers,switches thru ssh protocol
+
+
+analytics
+-----------
+numpy    : numerical operations ( like matrix operation in schooling)
+scipy    : scientific formulas
+matploblib: visualizations
+pandas    : working with data
+scikit-learn : all the machine algorithms
+
+database
+---------
+cx_Oracle : connecting with oracle
+pymysql   : connecting with mysql
+pymongo   : with MongoDB
+pymssql   : with sql server
+
+
+image processing
+-----------------
+opencv
+pillow`
+
+cloud
+------
+boto3  ( for aws infra)
+oci    ( for oracle cloud)
+azure  ( for micsoft azure)
+
+gaming
+------
+pygame
+
+
+image processing
+-----------------
+opencv
+pillow`
+
+cloud
+------
+boto3  ( for aws infra)
+oci    ( for oracle cloud)
+azure  ( for micsoft azure)
+
+gaming
+------
+pygame
+
+
+
+
+
+
+
+
+
+In C
+------
+
+#include<stdio.h>
+
+
+In python
+---------
+import math
+
+
+different ways of importing library
+-----------------------------------
+
+
+method1 : (  all the methods will be imported to the program namespace )
+----------
+import math 
+print(math.log(2))
+
+method2 :    ( creating alias name )
+---------
+import math as m
+print(m.log(3))
+
+
+method3 :   (we are importing only log to the program and . is not required
+---------
+from math import log,sin,tan
+print(log(2))
+print(sin(3))
+print(cos(1))
+
+
+method4:    ( all the methods are imported and . is not re
+quired )
+---------
+from math import *
+print(log(2))
+print(sin(3))
+
+
+
+
+
+
+https://notepad.pw/u1ayvhmz
+
+
+import xml.etree.ElementTree as ET  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Exception handling
+------------------
+
+
+
+There are two types of errors
+
+1. syntax error
+2. sementic error ( runtime error)
+
+Handling the errors in the runtime is known as exception handling
+
+try
+except ( catch in java)
+else          -----------------> optional
+finally       -----------------> optional
+raise         -----------------> to raise the exceptions forcefully
+
+try:
+    ## your logic
+except:
+    ## when something went wrong... except block gets executed
+else :
+    ## if no exception found ... else block gets executed
+finally:
+    # finally block will be executed all the times
+
+
+
+pandas
+--------
+
+Series  ( one dimen data)
+Dataframes ( 2-d data )
+ 
+
+Serialization/Marshalling/pickling
+-------------------------------------
+The process of converting  a object from
+python supported form to file supported form is
+called serialiation
+
+
+Deserialization/Unmarshalling/unpickling
+---------------
+file supported form ----.> python supported form
+
+
+
+
+
+
+ 
+display all the existing databases
+-----------------------------------
+show databases ;
+
+create your database
+----------------------
+create database tcl;
+
+accesing your database
+---------------------
+use tcl;
+
+display all the tables
+-----------------------
+show tables    ( will be empty)
+
+creating table
+----------------
+create table realestate( street varchar(100) , city varchar(100)) ;
+
+inserting the records
+-----------------------
+insert into realestate values('MG Road','Pune');
+insert into realestate values('University Road','Pune');
+
+displaying the records
+----------------------
+select * from realestate;
+
+display all the fields of table
+--------------------------------
+desc realestate
+
+
+
+create table realestateinfo ( street varchar(100) , city varchar(100) , zip varchar(100) , state varchar(100) , beds varchar(100) , baths varchar(100) , sq_ft varchar(100) , type varchar(100) , sale_date varchar(100) , price varchar(100) , latitude varchar(100) , longitude varchar(100) );
+
+
+
+
+
+
+
+
+
+re    ( regex or regular expression )
+---
+
+- match   ( only at the beginning of the string)
+- search  ( anywhere in the string )
+- substitute ( replace the patterns )
+
+meta characters (or) wildcard characters
+---------------------------------------
+^    : at the beginning of the string
+       if re.search("^python", name)  
+
+$    : at the end of the string
+       if re.search("python$", line )
+*    : zero or more occurences of the preceding character
+       if re.search("pyt*hon", line)
+       python --------------> valid
+       pyhon  ---------------> valid
+       pytttttttttthon ------> valid
+
++    : one or more occurence of the preceding character
+       if re.search("pyt+hon", line)
+       python --------------> valid
+       pyhon  ---------------> Invalid
+       pytttttttttthon ------> valid
+
+?    : either zero or one occurence of the preceding character
+       if re.search("pyt?hon", line)
+       python --------------> valid
+       pyhon  ---------------> valid
+       pytttttttttthon ------> invalid
+
+
+.    : any single character or digit or symbol
+       if re.search(".ython",line)
+mython  -------------> valid
+jython  -------------> valid
+
+(|)  :  (string1|string2)
+        if re.search("perl|python" , line)
+
+        if re.search("perl|^python|ruby$" , line)
+
+{}   :  { min,max}    min to max occurences of preceding character
+        if re.search("pyt{2,5}thon",line)
+         python ---------------> Invalid
+         pyhon   ---------------> Invalid
+         pytttthon -------------> valid
+
+[]   : any character or digit or symbol defined in []
+         if re.search("[abcdezy]ython", line )
+         aython   --------------> valid
+         bython   --------------> valid
+         dython   --------------> Ivalid
+         mython   --------------> Invalid
+         
+
+\d   : any digit
+\s   : any white space
+
+
+
+import re
+
+line  = "The rain in Spain"
+x = re.findall("ai", line)
+print(x)
+
+
+line = "The rain in Spain"
+x = re.findall("Portugal", line)
+print(x)
+
+
+line = "The rain in Spain"
+x = re.search("\s", line)
+print("The first white-space character is located in position:", x.start())
+
+
+line = "The rain in Spain"
+x = re.search("Portugal", line)
+print(x)
+
+
+
+line = "The rain in Spain"
+x = re.sub("\s", "9", line)    # re.sub(pattern , replacment , orig string)
+print(x)
+
+
+import re
+string = 'hello 12 hi 89. Howdy 34'
+pattern = '\d+'
+result = re.findall(pattern, string)
+print(result)
+
+
+import re
+string = 'Twelve:12 Eighty nine:89.'
+pattern = '\d+'
+result = re.split(pattern, string)
+print(result)
+
+
+
+
+
+import re
+# multiline string
+string = 'abc    12de 23 \n f45 6'
+# matches all whitespace characters
+pattern = '\s+'
+# empty string
+replace = ' '
+new_string = re.sub(pattern, replace, string)
+print(new_string)
+
+
+
+import re
+string = '39801 356, 2102 1111'
+# Three digit number followed by space followed by two digit number
+pattern = '(\d{3}) (\d{2})'
+# match variable contains a Match object.
+match = re.search(pattern, string)
+if match:
+  print(match.group())
+else:
+  print("pattern not found")
+# Output: 801 35
+
+
+
+
+
+import re
+
+regex = '^[\w]+@[\w]+'
+
+email = "giridhar276@gmail.com"
+
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+
+
+
+import re
+
+regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+
+email = "giridhar276@gmail.com"
+
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+
+
+
+import socket
+
+
+ip = '10.10.20.30'
+
+if socket.inet_aton(ip):
+    print("Valid IP")
+else:
+    print("Invalid IP")
+   
+
+
+try:
+    ip = '10.10.20.300'
+
+    if socket.inet_aton(ip):
+        print("Valid IP")
+    else:
+        print("Invalid IP")
+
+except Exception as error:
+    print(error)
+
+
+
+
+
+
+import re    
+ip="2.1.1.1000"
+if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$",ip):
+    print("Valid IP")
+else:
+    print("Invalid IP")
+   
+   
+
+import re
+ip = input("\nEnter Ip address : ")
+if re.match("^([1][0-9][0-9].|^[2][5][0-5].|^[2][0-4][0-9].|^[1][0-9][0-9].|^[0-9][0-9].|^[0-9].)([1][0-9][0-9].|[2][5][0-5].|[2][0-4][0-9].|[1][0-9][0-9].|[0-9][0-9].|[0-9].)([1][0-9][0-9].|[2][5][0-5].|[2][0-4][0-9].|[1][0-9][0-9].|[0-9][0-9].|[0-9].)([1][0-9][0-9]|[2][5][0-5]|[2][0-4][0-9]|[1][0-9][0-9]|[0-9][0-9]|[0-9])$",ip):
+    print("Valid IP")
+else:
+    print("Invalid IP")
